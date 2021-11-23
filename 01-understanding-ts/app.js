@@ -1,12 +1,9 @@
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READONLY"] = 1] = "READONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-var person = {
-    name: 'Josh',
-    age: 33,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.ADMIN // (number | string)[]
+var combine = function (input1, input2) {
+    return input1 === 'number' && typeof input2 === 'number'
+        ? input1 + input2
+        : input1.toString() + input2.toString();
 };
+var combinedNames = combine('first', ' last');
+var combinedAges = combine('40', 40);
+console.log(combinedNames);
+console.log(combinedAges);
